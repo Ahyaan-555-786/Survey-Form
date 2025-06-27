@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header text-center">
+      <h1 id="title">Survey Form</h1>
+      <p id="description" class="description">
+        Thank you for taking the time to help us improve the platform by filling out this survey.
+      </p>
+    </header>
+
+    <form id="survey-form">
+      <!-- Name -->
+      <div class="form-group">
+        <label id="name-label" for="name">Name:</label>
+        <input id="name" type="text" name="name" placeholder="Enter your name" class="form-control" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label id="email-label" for="email">Email Address:</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" class="form-control" required>
+      </div>
+
+      <!-- Number -->
+      <div class="form-group">
+        <label id="number-label" for="number">Age (optional):</label>
+        <input id="number" type="number" name="age" min="10" max="120" placeholder="Enter your age" class="form-control">
+      </div>
+
+      <!-- Dropdown -->
+      <div class="form-group">
+        <label for="dropdown">Which programming language do you use most?</label>
+        <select id="dropdown" name="language" class="form-control" required>
+          <option value="">--Please select an option--</option>
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="cpp">C++</option>
+        </select>
+      </div>
+
+      <!-- Radio -->
+      <div class="form-group">
+        <label>How experienced are you with programming?</label>
+        <label><input type="radio" name="experience" value="beginner" class="input-radio" required> Beginner</label><br>
+        <label><input type="radio" name="experience" value="expert" class="input-radio"> Expert</label><br>
+        <label><input type="radio" name="experience" value="hacker" class="input-radio"> Hacker</label>
+      </div>
+
+      <!-- Checkboxes -->
+      <div class="form-group">
+        <label>Select your current role:</label>
+        <label><input type="checkbox" name="interest" value="student" class="input-checkbox"> Student</label><br>
+        <label><input type="checkbox" name="interest" value="fulltimejob" class="input-checkbox"> Full Time Job</label><br>
+        <label><input type="checkbox" name="interest" value="fulltimelearner" class="input-checkbox"> Full Time Learner</label>
+      </div>
+
+      <!-- Textarea -->
+      <div class="form-group">
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea id="comments" name="comments" class="form-control input-textarea" rows="5" placeholder="Share your thoughts here..."></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="form-group">
+        <input id="submit" type="submit" value="Submit Survey" class="submit-button">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
